@@ -4,9 +4,10 @@ EXPOSE 3000
 
 WORKDIR /src
 COPY src .
-COPY node/entrypoint.sh scripts/entrypoint.sh
+RUN cd commit-gate && yarn install
+#COPY node/entrypoint.sh scripts/entrypoint.sh
 
-RUN chmod +x scripts/*
+#RUN chmod +x scripts/*
 
 
-CMD ["scripts/entrypoint.sh"]
+#CMD ["scripts/entrypoint.sh"]
