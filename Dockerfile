@@ -1,12 +1,8 @@
-FROM node:lts
+FROM node:lts-alpine
 
 EXPOSE 3000
 
+RUN apk update && \
+    apk --update add git
 WORKDIR /src
 COPY src .
-COPY node/entrypoint.sh scripts/entrypoint.sh
-
-RUN chmod +x scripts/*
-
-
-CMD ["scripts/entrypoint.sh"]
