@@ -52,6 +52,10 @@ export default {
     baseURL: '/',
   },
 
+  server:{
+    host:'0.0.0.0'
+  },
+
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
